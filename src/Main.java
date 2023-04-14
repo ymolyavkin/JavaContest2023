@@ -1,3 +1,5 @@
+import InputOutput.ReadInput;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,9 +8,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         System.out.println("Hello world!");
-        /**
+        var v = ReadInput.readInputJava7();
+        System.out.println(v);
+
+      /*  *//**
          * Oracle Java 7
          */
+      /*
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String input = reader.readLine().trim();
         String[] strings = input.split(" ");
@@ -16,9 +22,9 @@ public class Main {
         System.out.println(Long.parseLong(strings[0]) + Long.parseLong(strings[1]));
 
 
-        /**
+        *//**
          * Oracle Java 8
-         */
+         *//*
         int x = 0;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,9 +35,9 @@ public class Main {
 
         }
         System.out.println(x);
-        /**
+        *//**
          * OpenJDK Java 11 x64
-         */
+         *//*
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             String s = bufferedReader.readLine();
@@ -42,6 +48,6 @@ public class Main {
             System.out.println(x1 + x2);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
