@@ -5,15 +5,31 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        System.out.println("Hello world!");
-        var v = ReadInput.readInputJava7();
-        System.out.println(v);
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            String a = bufferedReader.readLine();
+            String b = bufferedReader.readLine();
+            bufferedReader.close();
 
-      /*  *//**
-         * Oracle Java 7
-         */
+            int x1 = Integer.parseInt(a);
+            int x2 = Integer.parseInt(b);
+            System.out.println(x1 + x2);
+            System.out.println(x1 * x2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/*  *//**
+ * Oracle Java 7
+ * <p>
+ * Oracle Java 8
+ * <p>
+ * OpenJDK Java 11 x64
+ */
       /*
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String input = reader.readLine().trim();
@@ -23,8 +39,8 @@ public class Main {
 
 
         *//**
-         * Oracle Java 8
-         *//*
+ * Oracle Java 8
+ *//*
         int x = 0;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -36,8 +52,8 @@ public class Main {
         }
         System.out.println(x);
         *//**
-         * OpenJDK Java 11 x64
-         *//*
+ * OpenJDK Java 11 x64
+ *//*
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             String s = bufferedReader.readLine();
@@ -49,5 +65,4 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-    }
-}
+
